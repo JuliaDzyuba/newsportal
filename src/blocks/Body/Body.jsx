@@ -29,7 +29,6 @@ const Body = ({ news }) => {
   return(
     <main>
       <div className="container">
-        {/* <NewsGallery news={news} /> */}
         <Switch>
           <Route path="/" exact>
             {
@@ -59,7 +58,6 @@ const Body = ({ news }) => {
           <Route path="/:category/:id">
             <NewsDetail {...chooseArticle} news={news}/>
           </Route>
-          
         </Switch>
       </div>
     </main>
