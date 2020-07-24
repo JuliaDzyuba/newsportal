@@ -1,0 +1,18 @@
+@import '../../scss/global.scss';
+
+.article {
+  &__title{
+    @include heading( 26px, 700, $main-color);
+    margin-bottom: 40px;
+  }
+  .item__wrap{
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+  .item__details{
+    margin-bottom: 60px;
+  }
+  p {
+    @include heading( 14px, 400, $main-color);
+  }
+}

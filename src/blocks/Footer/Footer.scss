@@ -1,0 +1,111 @@
+@import '../../scss/global.scss';
+
+.footer {
+  background-color: #2A3644;
+  color: $white-text;
+  padding: 60px 0 40px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color: $white-text;
+    text-transform: uppercase;
+    @include heading(25px, 700, $white-text);
+    margin-top: 0;
+  }
+  &__phone, &__email, &__address {
+    color: $white-text;
+    
+  }
+ 
+  &__lastnews {
+    flex: 0 0 40%;
+  }
+  &__contacts, &__social {
+    flex: 0 0 25%;
+  }
+  &__item {
+    &_title {
+      color: $white-text;
+    }
+  }
+  &__socialLinks li {
+    margin-bottom: 20px;
+    padding: 10px 0 10px 65px;
+    background-size: 45px;
+    a {
+      color: $white-text;
+      &:hover{
+        color: $active-color;
+      }
+    }
+  }
+  &__policy {
+    padding: 10px 0;
+    margin-top: 40px;
+    text-align: center;
+    @include heading(12px, 400, $white-text);
+  }
+  &__made {
+    text-align: center;
+    padding: 10px 0;
+    a{
+      @include heading(12px, 400, $white-text);
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      &:hover{
+        color: $active-color;
+      }
+      // &:after{
+      //   content: '';
+      //   width: 135px;
+      //   display: block;
+      //   height: 1px;
+      //   background-color: $white-text;
+      //   position: absolute;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      // }
+    }
+  }
+}
+.facebook {
+  background: url(../../img/facebook-logo.png) no-repeat left center / cover;
+}
+.google {
+  background: url(../../img/google-logo.png) no-repeat left center / cover;
+}
+.twitter {
+  background: url(../../img/twitter-logo.png) no-repeat left center / cover;
+}
+.dribbble {
+  background: url(../../img/dribble-logo.png) no-repeat left center / cover;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    &__lastnews {
+      display: none;
+    }
+    &__contacts, &__social {
+      flex: 0 0 45%;
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  .footer{
+
+    &__wrapper {
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &__phone, &__email, &__address {
+      
+      width: 60%;
+      margin: 0 auto 20px auto;
+    }
+  }
+}

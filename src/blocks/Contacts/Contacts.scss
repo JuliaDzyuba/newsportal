@@ -1,0 +1,93 @@
+@import '../../scss/global.scss';
+.contacts {
+  &__title {
+    text-transform: uppercase;
+    @include heading(42px, 700, $main-color);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  &__block {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0 60px 0;
+  }
+  
+  &__form {
+    width: 60%;
+    border-top: 6px solid $active-color;
+    padding-top: 40px;
+    h2 {
+      @include heading(25px, 700, $main-color);
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    span {
+      display: inline-block;
+      text-transform: uppercase;
+      color: $white-text;
+      padding: 2px;
+      min-width: 100px;
+      text-align: center;
+      line-height: 1em;
+      background: #279cbe;
+      margin-bottom: 30px;
+      font-size: 11px;
+    }
+  }
+  &__button{
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    color: $white-text;
+    text-transform: uppercase;
+    padding: 15px 50px;
+    background: $main-color;
+    border: none;
+    transition: all 0.5s ease;
+    &:hover{
+      background: $active-color;
+    }
+  }
+}
+.input {
+  border: 1px solid #cfcfcf;
+  padding: 10px;
+  margin: 0px 0px -5px 0px;
+  width: 100%;
+}
+
+.area {
+  border: 1px solid #cfcfcf;
+  padding: 10px;
+  margin: 0px 0px -10px 0px;
+  height: 150px;
+  resize: none;
+  width: 100%;
+}
+
+.map {
+  iframe {
+    width:100%; 
+    min-height:450px; 
+    border:0; 
+    margin-bottom: 40px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    &__block {
+      flex-wrap: wrap;
+      .contacts__info{
+        display: none;
+      }
+    }
+    &__form {
+      width: 100%;
+    }
+    
+  }
+}

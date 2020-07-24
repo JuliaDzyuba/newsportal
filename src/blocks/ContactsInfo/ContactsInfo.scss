@@ -1,0 +1,29 @@
+@import '../../scss/global.scss';
+
+.info {
+  &__title {
+    text-transform: uppercase;
+    @include heading(25px, 700, $main-color);
+    margin-top: 0;
+  }
+  &__phone, &__email, &__address {
+    color: $main-color;
+    @include heading(14px, 700, $main-color);
+    padding: 10px 0px 10px 25px;
+    &:hover{
+      color: $active-color;
+    }
+  }
+  &__phone {
+    background: url(../../img/mobile-phone.png) no-repeat left center;
+    background-size: 15px;
+  }
+  &__email {
+    background: url(../../img/mail.png) no-repeat left center;
+    background-size: 20px;
+  }
+  &__address {
+    background: url(../../img/location.png) no-repeat left center;
+    background-size: 20px;
+  }
+}

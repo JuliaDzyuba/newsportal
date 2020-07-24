@@ -1,0 +1,72 @@
+@import '../../scss/global.scss';
+
+.section {
+  padding-bottom: 40px;
+  &__title{
+    @include heading(14px, bold, $main-color);
+    text-transform: uppercase;
+    border-left: 6px solid $main-color;
+    background-color: #e7e7e7;
+    padding: 10px 15px;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+  }
+  &__item {
+    margin-top: 40px;
+    flex: 0 0 32%;
+    &_lastnews {
+      flex: 0 0 23%;
+      .item__descr, .item__more {
+        display: none;
+      }
+    }
+  }
+  &__category{
+    width: 65%;
+  }
+}
+
+
+@media (max-width: 992px) {
+  
+  .section{
+    &__category{
+      width: 100%;
+    }
+    &__item {
+      margin-top: 40px;
+      flex: 0 0 100%;
+      .item__link {
+        display: flex;
+      }
+      &_lastnews {
+        flex: 0 0 45%;
+      }
+    }
+  } 
+}
+@media (max-width: 768px) {
+  
+  .section{
+    &__item {
+      flex: 0 0 100%;
+      &_lastnews {
+        flex: 0 0 45%;
+      }
+    }
+  } 
+}
+@media (max-width: 576px) {
+  
+  .section{
+    &__item {
+      &_lastnews {
+        flex: 0 0 100%;
+      }
+    }
+  } 
+}
+

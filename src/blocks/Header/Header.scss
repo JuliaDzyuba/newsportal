@@ -1,0 +1,139 @@
+@import '../../scss/global.scss';
+
+.header {
+  background-color: $bg-color;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  &__burger {
+    display: none;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+  }
+}
+.logo {
+  @include heading(40px, 700, $main-color);
+  text-transform: uppercase;
+  line-height: 40px;
+  span {
+    color: $active-color;
+  }
+}
+.social {
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    
+    li {
+      border-left: 1px solid $grey-text;
+      padding-left: 30px;
+      margin-left: 20px;
+      a {
+        opacity: 0.2;
+        width: 20px;
+        height: 20px;
+        font-size: 0px;
+        line-height: 1;
+        background-size: contain;
+      }
+    }
+    &_facebook {
+      background: url(../../img/facebook.png) no-repeat center center;
+    }
+    &_instagram {
+      background: url(../../img/instagram.png) no-repeat center center;
+    }
+    &_pinterest {
+      background: url(../../img/pinterest.png) no-repeat center center;
+    }
+    &_vimeo {
+      background: url(../../img/vimeo.png) no-repeat center center;
+    }
+  }
+ 
+}
+
+
+@media (max-width: 992px) {
+  .header {
+    &__search {
+      display: none;
+    }
+  }
+  .menu {  
+    &__items {
+      a{
+        padding: 22px 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .header {
+    
+    &__info{
+      padding: 15px 0;
+    }  
+    &__burger {
+      position: relative;
+      display: block;
+      text-align: right;
+      width: 120px;
+      margin: 0 auto;
+      padding: 10px;
+      text-transform: uppercase;
+      @include heading ( 20px, 400, $white-text);
+      line-height: 1;
+      span {
+        position: absolute;
+        background-color: #fff;
+        width: 30px;
+        height: 3px;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &::after, &::before {
+        position: absolute;
+        display: block;
+        content: "";
+        background-color: #fff;
+        width: 30px;
+        height: 2px;
+      }
+      &::after{
+        bottom: 25%;
+      }
+      &::before{
+        top: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    
+    &__info{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .social{
+    padding-top: 10px;
+    &__links li {
+      padding-left: 20px;
+      &:nth-child(1){
+        border-left: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

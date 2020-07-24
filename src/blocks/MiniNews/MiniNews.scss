@@ -1,0 +1,39 @@
+@import '../../scss/global.scss';
+
+.mini {
+  &__item{
+    display: flex;
+    margin-bottom: 20px;
+    &:hover{
+      display: flex;
+    }
+    &_descr{
+      padding-left: 20px;
+    }
+    &_title  {
+      @include heading(14px, 700, $main-color);
+      margin: 0 0 5px 0;
+      &:hover {
+        color: $active-color;
+      }
+    }
+    &_details{
+      @include heading(10px, 400, $grey-text);
+      text-transform: uppercase;
+    }
+  }
+  &__img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+  }
+  
+}
+
+@media (max-width: 1140px) {
+  .mini {
+    &__img {
+      display: none;
+    }
+  }
+}

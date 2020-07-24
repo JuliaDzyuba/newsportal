@@ -1,0 +1,11 @@
+$main-color: #0e2f56;
+$active-color: #FF304F;
+$bg-color: #f5f5f5;
+$white-text: #ffffff;
+$grey-text: #9a9a9a;
+
+@mixin heading ($fs, $fw, $c){
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+}

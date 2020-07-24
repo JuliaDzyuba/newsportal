@@ -1,0 +1,140 @@
+@import '../../scss/global.scss';
+.item {
+  display: flex;
+  flex-direction: column;
+  &__title{
+    @include heading(18px, 700, $main-color);
+    min-height: 50px;
+    margin-top: 0;
+    &:hover{
+      color: $active-color;
+    }
+  }
+  &__wrap{
+    max-height: 240px;
+    max-width: 360px;
+    overflow: hidden;
+  }
+  &__img {
+    width: 100%;
+    min-height: 240px;
+    max-height: 240px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    
+    &:hover{
+      transform: scale(1.2);
+    }
+    &_lastnews {
+      min-height: 165px;
+      max-height: 165px;
+      object-fit: cover;
+    }
+  }
+  
+  &__category {
+    max-width: 100%;
+    margin-top: 40px;
+    &_info {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      padding-left: 20px;
+    }
+    &_link {
+      display: flex;
+      &:hover{
+        display: flex;
+      }
+    }
+  }
+  
+  &__details{
+    @include heading(10px, 700, $main-color);
+    text-transform: uppercase;
+    span {
+      color: $grey-text;
+    }
+  }
+  &__descr {
+    @include heading(15px, 400, $grey-text);
+  }
+  &__more{
+    padding: 10px 8px;
+    text-transform: uppercase;
+    border-top: 1px solid $grey-text;
+    border-bottom: 1px solid $grey-text;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+}
+.btn {
+  @include heading(12px, 600, $main-color);
+  text-transform: uppercase;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  &__more{
+    padding-right: 15px;
+    background: url(https://toppng.com/uploads/preview/arrow-right-svg-png-icon-free-download-arrow-sign-11562857358hz0xnvqwkz.png) no-repeat center right;
+    background-size: 10px;
+  }
+  &:focus {
+    outline: 1px solid $grey-text;
+  }
+}
+
+
+
+@media (max-width: 992px){
+  .item{
+    &__section{
+      &_info{
+        width: 70%;
+        padding-left: 20px;
+      }
+    }
+  } 
+}
+@media (max-width: 768px){
+  .item{
+    &__wrap{
+      max-width: 100%;
+    }
+    &__link {
+      display: flex;
+      flex-direction: column;
+      
+    }
+    &__section{
+      &_info{
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+    &__category{
+      &_link {
+        flex-direction: column;
+      }
+      &_info {
+        width: 100%;
+      }
+    }
+    &__title {
+      margin-top: 20px;
+    }
+  } 
+}
+
+@media (max-width: 576px){
+  .item{
+    &__section{
+      &_info{
+        width: 100%;
+      }
+    }
+  } 
+}
+

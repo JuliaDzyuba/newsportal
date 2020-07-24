@@ -1,0 +1,35 @@
+@import 'variable.scss';
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    max-width: 991px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 425px;
+  }
+}
+@media (max-width: 425px) {
+  .container {
+    max-width: 320px;
+  }
+}
+

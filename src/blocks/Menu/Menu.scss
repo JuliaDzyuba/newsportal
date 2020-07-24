@@ -1,0 +1,75 @@
+@import '../../scss/global.scss';
+.menu {
+  background-color: $main-color;
+  position: relative;
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    a{
+      @include heading(14px, 400, $white-text);
+      text-align: center;
+      text-transform: uppercase;
+      display: block;
+      padding: 22px 30px;
+    }
+    &_active {
+      background: $active-color;
+    }
+  }
+}
+
+.burger {  
+  &__items {
+    display: none;
+  }
+}
+
+
+@media (max-width: 992px) {
+  
+  .menu {  
+    &__items {
+      a{
+        padding: 22px 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .menu {  
+    &__items {
+      display: none;
+      position: absolute;
+      width: 100%;
+      flex-direction: column;
+      background-color: $main-color;
+      z-index: 5;
+      top: 100%;
+      left: 0;
+    }
+  }
+  .burger {  
+    &__items {
+      display: block;
+      position: absolute;
+      width: 100%;
+      flex-direction: column;
+      background-color: $main-color;
+      z-index: 5;
+      top: 100%;
+      left: 0;
+      a {
+        font-size: 14px;
+        font-weight: 400;
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        padding: 20px;
+      }
+    }
+  }
+}

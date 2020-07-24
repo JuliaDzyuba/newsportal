@@ -1,0 +1,23 @@
+@import '../../scss/global.scss';
+// @import '../../scss/media.scss';
+
+.sidebar {
+  width: 30%;
+  
+  &__title{
+    background-color: $active-color;
+    @include heading(14px, 700, $white-text);
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 40px;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  
+  .sidebar {
+    display: none;
+  }
+}

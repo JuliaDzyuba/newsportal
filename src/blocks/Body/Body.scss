@@ -1,0 +1,11 @@
+@import '../../scss/global.scss';
+
+main {
+  padding-top: 155px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 135px;
+  }
+}

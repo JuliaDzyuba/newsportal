@@ -1,0 +1,8 @@
+@import '../../scss/global.scss';
+
+.category {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 40px 0 60px 0;
+}
